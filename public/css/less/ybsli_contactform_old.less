@@ -1,0 +1,48 @@
+.form-inline .radio, .form-inline .checkbox {
+   padding-right: 25px;
+}
+
+label[for=name], label[for=emailAddress] {
+  @media (min-width: @screen-sm-min) {
+    width: 100%;
+    padding-right: 0px;
+    display: block;
+  }
+  @media (min-width: @screen-md-min) {
+    width: 150px;
+    padding-right: 15px;
+    display: inline-block;
+  }
+  @media (min-width: @screen-lg-min) {
+    width: 200px;
+    padding-right: 15px;
+    display: inline-block;
+  }
+}
+
+#name, #emailAddress {
+  @media (min-width: @screen-sm-min) {
+    width: 100%;
+    padding-right: 0px;
+    display: block;
+  }
+  @media (min-width: @screen-md-min) {
+    width: ~"calc(100% - 215px)";
+    padding-right: 15px;
+    display: inline-block;
+  }
+  @media (min-width: @screen-lg-min) {
+    width: ~"calc(100% - 215px)";
+    padding-right: 15px;
+    display: inline-block;
+  }
+}
+
+#subject, #emailBody {
+  width: ~"calc(100% - 15px )";
+  padding-right: 15px;
+}
+
+.yblsi-help-block {
+  display: none;
+}

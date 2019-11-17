@@ -1,0 +1,28 @@
+include navigation.jade
+include breadcrumb.jade
+
+doctype html
+html
+  head
+    include head.jade
+  body
+    .container
+      .box
+        block navigation
+          +navigation(navTitle)
+        .main
+          .row
+            .lcolumn.col-md-12
+              +breadcrumb(pageName)   
+            .lcolumn.col-md-8
+              block lcontent
+            .rcolumn.col-md-4
+              block rcontent
+        include footer.jade
+    include cookie.jade
+  block scripts
+    script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.js')
+    script(type='text/javascript', src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js')
+    script(type='text/javascript', src='/js/jquery.cookie.js')
+    script(type='text/javascript', src='/js/cookie.js')
+    include analytics.jade

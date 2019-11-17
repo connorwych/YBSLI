@@ -1,0 +1,66 @@
+extends template/template.jade
+
+block pageMeta
+   title Yorkshire BSL Interpreters | Contact
+   meta(name='description' content= "Portal for contacting freelance BSL/English interpreters in the Yorkshire region")
+
+block prepend navigation
+  - var navTitle          = "Contact";
+
+block append scripts
+  script(src='https://www.google.com/recaptcha/api.js')
+  script(src='/js/presetformdata.js')
+  script(src='/js/sendemail.js')
+
+
+block lcontent
+  .contact
+    form(action="/services/sendGroupEmail" method="post" id="contactForm")
+      h3 About you
+      .form-group
+        label.control-label(for="name") Your name
+        input#name.form-control(type="text" name="senderName" placeholder="Your name")
+        span(id="nameHelpBlock" class="help-block yblsi-help-block") Please enter your name
+      .form-group
+        label(for="emailAddress") Your email address
+        input(type="email" class="form-control" id="emailAddress" name="senderEmail" placeholder="Your email")
+      .form-group
+        .form-inline
+          h3 About the group you'd like to contact
+          .form-group
+            .radio
+              label
+                input#allGenders(type='radio', name='genderFilter', value='all')
+                |       All interpreters
+            .radio
+              label
+                input#maleInterpreters(type='radio', name='genderFilter', value='male')
+                |       Contact male interpeters
+            .radio
+              label
+                input#femaleInterpreters(type='radio', name='genderFilter', value='female')
+                |       Contact female interpreters
+        .form-inline
+          .checkbox
+            label
+              input(type='checkbox' name="mentalHealthWorkFilter" id="mentalHealthWorkFilter")
+              |  Mental Health Work
+          .checkbox
+            label
+              input(type='checkbox' name="legalWorkFilter" id="legalWorkFilter")
+              |  Legal Work
+      .form-group.emailMessage
+        .form-group
+          label(for="name") Subject
+          input(type="text" class="form-control" id="subject" name="subject" placeholder="Subject")
+        .form-group
+          label(for="emailBody") Message
+          textarea(class="form-control" id="emailBody" name="emailBody" rows="3")
+        .form-group
+          .g-recaptcha(data-sitekey="6LflT_ASAAAAAKMxtaXIdissZbPBHEnPmj7giH4k")
+      button(type="submit" id="emailSubmit" class="btn btn-default") Submit
+
+block rcontent
+    h2  About
+    p This website is a quick and convenient way for you to contact qualified, registered British Sign Language interpreters who live locally.
+    p A simple one click button lets you send an email to all the interpreters listed saving you time and money.

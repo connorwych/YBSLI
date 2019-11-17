@@ -1,0 +1,76 @@
+extends template/template.jade
+
+block pageMeta
+   title Yorkshire BSL Interpreters | Contact
+   meta(name='description' content= "Portal for contacting freelance BSL/English interpreters in the Yorkshire region")
+   link(rel="canonical" href="/contact/")
+
+block prepend navigation
+  - var navTitle          = "Contact";
+
+block append scripts
+  script(src='/js/boostrapvalidator.js')
+  script(src='/js/validate.js')
+  script(src='https://www.google.com/recaptcha/api.js')
+  script(src='/js/presetformdata.js')
+  script(src='/js/sendemail.js')
+
+block lcontent
+  .contact
+    form(action="/services/sendGroupEmail" method="post" id="contactForm")
+      h3 About You
+      p Please use the form below to contact us all, or if you prefer you can slect any preference by clicking the options.
+      p Please provise us as much information as you can about the assignment so we can respond to the best of our ability. All the interpreters here are individuals who will do their best to respond if they are free. If you hear nothing back it may well be that there is no-one available on the particular date you are looking for.
+    
+      .form-horizontal
+        #nameGroup.form-group
+          label.control-label.col-sm-3.ybsli-control-label(for='name') Your name
+          .col-sm-9
+            input#name.form-control(type='text' name="senderName" placeholder="Your name")
+        #emailGroup.form-group
+          label.control-label.col-sm-3.ybsli-control-label(for='email') Your email
+          .col-sm-9
+            input#email.form-control(type='text' name="senderEmail" placeholder="Your email")
+      .form-inline
+        h3 About the interpreters you'd like to contact
+        .form-group
+          .radio
+            label
+              input#allGenders(type='radio', name='genderFilter', value='all')
+              |       All interpreters
+          .radio
+            label
+              input#maleInterpreters(type='radio', name='genderFilter', value='male')
+              |       Contact male interpeters
+          .radio
+            label
+              input#femaleInterpreters(type='radio', name='genderFilter', value='female')
+              |       Contact female interpreters
+      .form-inline
+        .checkbox
+          label
+            input(type='checkbox' name="mentalHealthWorkFilter" id="mentalHealthWorkFilter")
+            |  Mental Health Work
+        .checkbox
+          label
+            input(type='checkbox' name="legalWorkFilter" id="legalWorkFilter")
+            |  Legal Work
+      div
+        h3 Your message
+        .form-group
+          label.control-label(for="Subject") Subject (please indicate a date and time here)
+          input(type="text" class="form-control" id="subject" name="subject" placeholder="Subject")
+        .form-group
+          label.control-label(for="emailBody") Message (please include brief details of the assignment including your location)
+          textarea(class="form-control" id="emailBody" name="emailBody" rows="3")
+        .form-group
+          #g-recaptcha.g-recaptcha(data-sitekey="6LflT_ASAAAAAKMxtaXIdissZbPBHEnPmj7giH4k" data-callback="gCallback")
+          input(type='hidden' id="recaptchaHidden" name="recaptchaHidden")
+  
+      button(type="submit" id="emailSubmit" class="btn btn-default") Submit
+      
+    
+block rcontent
+    h2  About 
+    p This website is a quick and convenient way for you to contact qualified, registered British Sign Language interpreters who live locally.
+    p A simple one click button lets you send an email to all the interpreters listed saving you time and money.

@@ -1,0 +1,45 @@
+.interpreterEntry {
+  margin: 15px;
+  padding: 0px;
+}
+.interpreterImageContainer {
+  background: black;
+
+}
+.interpreterImageContainer > img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.interpreterNameContainer {
+  opacity: 0;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 40px;
+  background: black;
+}
+
+.interpreterNameContainer p {
+  text-align: center;
+  color: white;
+}
+.interpreterEntry:hover .interpreterImageContainer img {
+  opacity: 0.5;
+  transition: opacity .5s ease-out;
+  -moz-transition: opacity .5s ease-out;
+  -webkit-transition: opacity .5s ease-out;
+  -o-transition: opacity .5s ease-out;
+}
+
+.interpreterEntry:hover .interpreterNameContainer {
+  opacity: 1;
+  transition: opacity .5s ease-out;
+  -moz-transition: opacity .5s ease-out;
+  -webkit-transition: opacity .5s ease-out;
+  -o-transition: opacity .5s ease-out;
+}
+
+.clear{
+  clear: both;
+}

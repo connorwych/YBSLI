@@ -1,0 +1,23 @@
+.footer{
+  background: #444;
+  color: white;
+
+	@media(min-width: @ybsli-content-break-point) {
+		padding: (@ybsli-content-padding/2) (@ybsli-content-padding+@grid-gutter-width/2);
+
+	}
+	@media(max-width: @ybsli-content-break-point) {
+		padding: (@ybsli-content-padding/4) (@ybsli-content-padding/4+@grid-gutter-width/2);
+
+	}
+
+
+  & p{
+  	font-size: @font-size-small;
+  }
+  & a{
+    font-size: @font-size-small;
+    text-decoration: underline;
+    color: white;
+  }
+}

@@ -1,0 +1,26 @@
+.ybsli-breadcrumb {
+	ol {
+		padding: 	0px;
+		margin:		0px;
+
+		li {
+			display: inline-block;
+			text-decoration: none;
+
+			a {
+				color: @gray-light;
+				font-size: 1em;
+			}
+		}
+		li:before {
+			color: @gray-light;
+			content: "/";
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+		li:first-child:before {
+			content: none;
+		}
+
+	}
+}

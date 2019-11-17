@@ -1,0 +1,154 @@
+
+.navbar-ybsli {
+  background-color: @ybsli-banner-secondary;
+  border: none;
+  border-radius: 0px;
+
+ @media(min-width: @ybsli-content-break-point) {
+    padding-left: @ybsli-content-padding;
+    padding-right: @ybsli-content-padding;
+  }
+
+  @media(max-width: @ybsli-content-break-point){
+    padding: 0px;
+  }
+
+  @media(min-width: @grid-float-breakpoint) {
+      top: @ybsli-banner-height-lg - @navbar-height + 50px;
+  }
+
+  @media(max-width: @grid-float-breakpoint) {
+    top: 0px;
+  }
+
+  .navbar-brand {
+    color: @ybsli-banner-brand-font;
+    &:hover,
+    &:focus {
+      color: @ybsli-banner-brand-font-hover;
+      background-color: @ybsli-banner-brand-hover-bg;
+    }
+  }
+
+  .navbar-text {
+    color: @ybsli-banner-font;
+  }
+
+  .navbar-nav {
+    > li > a {
+      color: @ybsli-banner-link-font;
+
+      &:hover,
+      &:focus {
+        color: @ybsli-banner-link-font-hover;
+        background-color: @ybsli-banner-link-hover-bg;
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @ybsli-banner-link-active-color;
+        background-color: @ybsli-banner-link-active-bg;
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @ybsli-banner-link-disabled-color;
+        background-color: @ybsli-banner-link-disabled-bg;
+      }
+    }
+  }
+
+  // Darken the responsive nav toggle
+  .navbar-toggle {
+    border-color: @ybsli-banner-toggle-icon-bar-bg;
+    &:hover,
+    &:focus {
+      background-color: @ybsli-banner-toggle-hover-bg;
+      .icon-bar {
+        background-color: white;
+      }
+
+    }
+    .icon-bar {
+      background-color: @ybsli-banner-toggle-icon-bar-bg;
+
+    }
+
+  }
+
+  .navbar-collapse,
+  .navbar-form {
+  }
+
+  // Dropdowns
+  .navbar-nav {
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @ybsli-banner-link-active-color;
+      }
+    }
+
+    @media (max-width: @grid-float-breakpoint-max) {
+      // Dropdowns get custom display
+      .open .dropdown-menu {
+        > .dropdown-header {
+        }
+        .divider {
+          background-color: @ybsli-banner-border;
+        }
+        > li > a {
+          color: @ybsli-banner-link-font;
+          &:hover,
+          &:focus {
+            color: @ybsli-banner-link-font-hover;
+            background-color: @ybsli-banner-link-hover-bg;
+          }
+        }
+        > .active > a {
+          &,
+          &:hover,
+          &:focus {
+            color: @ybsli-banner-link-active-color;
+            background-color: @ybsli-banner-link-active-bg;
+          }
+        }
+        > .disabled > a {
+          &,
+          &:hover,
+          &:focus {
+            color: @ybsli-banner-link-disabled-color;
+            background-color: @ybsli-banner-link-disabled-bg;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-link {
+    color: @ybsli-banner-link-font;
+    &:hover {
+      color: @ybsli-banner-link-font-hover;
+    }
+  }
+
+  .btn-link {
+    color: @ybsli-banner-link-font;
+    &:hover,
+    &:focus {
+      color: @ybsli-banner-link-font-hover;
+    }
+    &[disabled],
+    fieldset[disabled] & {
+      &:hover,
+      &:focus {
+        color: @ybsli-banner-link-disabled-color;
+      }
+    }
+  }
+}

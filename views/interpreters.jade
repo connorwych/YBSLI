@@ -1,0 +1,43 @@
+extends template/template.jade
+
+block pageMeta
+   title Interpreters | Yorkshire BSL Interpreters
+   meta(name='description' content= "Portal for contacting freelance BSL/English interpreters in the Yorkshire region")
+   link(rel='cannonical' href='http://yorkshire-bsl-interpreters.co.uk/interpreters/')
+
+block prepend navigation
+  - var navTitle          = "Interpreters";
+
+block append scripts
+  script(type='text/javascript', src='/js/interpreterlookup.js')
+  script(type='text/javascript', src='/js/interpretertablefilter.js')
+
+//block append styles
+//  link(rel='stylesheet', href='css/interpreter-grid.css')
+
+
+block lcontent
+    h1  Interpreters
+    p Individual interpreter’s contact details can be found by clicking on our entries below. Each entry indicates any particular areas of experience each person has. To contact all interpreters please use the Contact page.
+    
+    #options
+      .btn-group(role='group')
+        button#showAll.btn.btn-default(type='button') All
+        button#maleFilter.btn.btn-default(type='button') Male
+        button#femaleFilter.btn.btn-default(type='button') Female
+          
+      button#mentalHealthWorkFilter.btn.btn-default(type='button')
+          | Mental Health Work 
+          
+      button#legalWorkFilter.btn.btn-default(type='button')
+          | Legal Work
+          
+      button#contactUs.btn.btn-default(type='button')
+        | Contact Us 
+    #interpreterTable
+    
+
+block rcontent
+    h2  About 
+    p This website is a quick and convenient way for you to contact qualified, registered British Sign Language interpreters who live in the Yorkshire region.
+    p A simple one click button lets you send an email to all the interpreters listed saving you time and money.

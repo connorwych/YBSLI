@@ -1,0 +1,39 @@
+extends template/template.jade
+
+block pageMeta
+   title Yorkshire BSL Interpreters
+   meta(name='description' content= "Portal for contacting freelance BSL/English interpreters in the Yorkshire region")
+
+block prepend navigation
+  - var navTitle          = "Home";
+
+block lcontent
+    h1  Cookies on Yorkshire BSL Interpreters
+    p Cookies are small text files that are stored on your computer, phone or tablet when you visit a website.  
+    
+    h2 Types of cookies on the YBSLI Website
+    
+    h3 Essential cookies
+    p Essential cookies are used to provide the basic functionality of the website, we'll continue to set these even if you opt out of the other types of cookies below.
+    
+    h3 Performance cookies
+    p YBSLI uses 
+     strong google analytics cookies
+     |  to track site usage and help us understand how visitors use the website.
+    p You can change your preference on if we can set these cookies below
+
+    h4  Performance cookie preference:
+    form#performanceCookiePreference
+      .form-check
+        label
+          input.form-check-input(type="radio" name="cookiePreference" id="optIn")
+          | I consent to the use of performance cookies
+      .form-check
+        label 
+          input.form-check-input(type="radio" name="cookiePreference" id="optOut")
+          | I do not content to the use of performance cookies
+
+block rcontent
+    h2  About 
+    p This website is a quick and convenient way for you to contact qualified, registered British Sign Language interpreters who live in the Yorkshire region.
+    p A simple one click button lets you send an email to all the interpreters listed saving you time and money.

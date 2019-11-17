@@ -1,0 +1,9 @@
+mixin breadcrumb(pageName)
+	.ybsli-breadcrumb
+		ol 
+			li
+				a(href='index.html') YBSLI
+			unless pageName=='index'
+				li
+					a(href= pageURL)= navTitle
+				

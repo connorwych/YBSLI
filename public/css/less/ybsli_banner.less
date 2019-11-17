@@ -1,0 +1,29 @@
+.header {
+ 	position: relative;
+ 	z-index: 999;
+ 	@media(min-width: @grid-float-breakpoint){
+		height: @ybsli-banner-height-lg + 50px;
+	}
+
+	@media(max-width: @grid-float-breakpoint){
+		height: @ybsli-banner-height-sm;
+	}
+}
+
+.banner {
+	width: 100%;
+	position: absolute;
+	top: 0px;
+
+	 background-color: @ybsli-brand-primary;
+
+	@media(max-width: @grid-float-breakpoint){
+		display: none;
+	}
+	@media(min-width: @grid-float-breakpoint){
+		height: @ybsli-banner-height-lg;
+    background-image: url('/images/theme/copy-banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+	}
+}
