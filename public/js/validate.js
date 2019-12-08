@@ -93,6 +93,10 @@ $(document).ready(function validateForm(){
 				e.preventDefault();
 				$('#contactForm').hide(400);
 				$('.contact').append("<h3>Email Successfully Sent </h3> <p> Interpreters will respond if they are available for your request (but may not fill up your inbox with replies if they are not). They may be in the middle of another job, so a reply may take a short while to come through.");
+			},
+			error: function(err){
+				$('#contactForm').hide(400);
+				$('.contact').append("<p>An error occured. Please try again later </p>");
 			}
 		});
 	});
@@ -110,6 +114,5 @@ $(document).ready(function validateForm(){
 });
 
 var gCallback = function () {
-	console.log("gCallback called");
 	$('#contactForm').bootstrapValidator('revalidateField', 'recaptchaHidden');
 }

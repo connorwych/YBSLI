@@ -25,7 +25,7 @@ router.post('/sendGroupEmail', function(req, res) {
 		logger.info("Request is from a human - sending email");
 		try {
 			logger.info("sending email");
-			mailer.sendEmail(req);
+			mailer.mail(req);
 			res.end("Success");
 			logger.info("email sent");
 		} catch(err) {
