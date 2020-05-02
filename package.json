@@ -16,7 +16,7 @@
     "express": "~4.13.1",
     "file-stream-rotator": "~0.0.6",
     "jade": "~1.11.0",
-    "jquery": "3.0.0",
+    "jquery": "3.5.0",
     "lessc": "^1.0.2",
     "morgan": "~1.6.1",
     "nodemailer": "~2.3.0",
